@@ -1,3 +1,4 @@
 venv
 .venv
 pirate-pack*
+__pycache__
