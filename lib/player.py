@@ -11,8 +11,10 @@ from pygame.locals import (
 class Player(pygame.sprite.Sprite):
     def __init__(self, parent: tuple[int, int]):
         super(Player, self).__init__()
-        self.surf = pygame.Surface((75, 75))
-        self.surf.fill((255, 255, 255))
+        original = pygame.image.load(
+            "pirate-pack/PNG/Default size/Ships/ship (1).png"
+        ).convert_alpha()
+        self.surf = pygame.transform.rotate(original, 90)
         self.rect = self.surf.get_rect()
         self.parent = parent
 
